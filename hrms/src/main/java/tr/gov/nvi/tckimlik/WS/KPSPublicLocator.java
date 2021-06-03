@@ -8,7 +8,7 @@
 package tr.gov.nvi.tckimlik.WS;
 
 public class KPSPublicLocator extends org.apache.axis.client.Service implements tr.gov.nvi.tckimlik.WS.KPSPublic {
-
+ 
     public KPSPublicLocator() {
     }
 
