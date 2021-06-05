@@ -35,4 +35,11 @@ public class EmployerManager implements EmployerService{
 		return new SuccessResult("Employer eklendi");
 	}
 
+	@Override
+	public DataResult<Employer> getByCompanyName(String companyName) {
+		return new SuccessDataResult<Employer>
+		(this.employerDao.getByCompanyName(companyName), "Employer listelendi");
+	}
+
+	
 }

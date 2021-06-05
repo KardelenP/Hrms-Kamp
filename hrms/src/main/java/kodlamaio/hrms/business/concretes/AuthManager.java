@@ -2,28 +2,19 @@ package kodlamaio.hrms.business.concretes;
 
 import java.util.regex.Pattern;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.stereotype.Service;
 
 import kodlamaio.hrms.business.abstracts.AuthService;
-import kodlamaio.hrms.business.abstracts.CandidateService;
-import kodlamaio.hrms.business.abstracts.EmployerService;
+
 import kodlamaio.hrms.core.utilities.results.ErrorResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.Candidate;
 import kodlamaio.hrms.entities.concretes.Employer;
 
-
+@Service
 public class AuthManager implements AuthService{
 
-	private EmployerService employerService;
-	private CandidateService candidateService;
-	
-	@Autowired
-	public AuthManager(EmployerService employerService, CandidateService candidateService) {
-		super();
-		this.employerService = employerService;
-		this.candidateService = candidateService;
-	}
 	
 	public static boolean isEmailValidation(String email) {
 	    final Pattern EMAIL_REGEX = Pattern.compile("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", Pattern.CASE_INSENSITIVE);

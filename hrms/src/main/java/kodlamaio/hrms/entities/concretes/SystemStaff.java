@@ -1,10 +1,7 @@
  package kodlamaio.hrms.entities.concretes;
 
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
@@ -19,8 +16,9 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="system_staffs")
 @EqualsAndHashCode(callSuper = false)
-@PrimaryKeyJoinColumn(name="user_id" ,referencedColumnName = "id")
+@PrimaryKeyJoinColumn(name ="user_id",referencedColumnName = "id")
 public class SystemStaff extends User {
+	
 	
 	
 	@Column(name="first_name")

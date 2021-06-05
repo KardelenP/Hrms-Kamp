@@ -11,7 +11,6 @@ import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.JobTitleDao;
-
 import kodlamaio.hrms.entities.concretes.JobTitle;
 
 @Service
@@ -32,7 +31,10 @@ public class JobTitleManager implements JobTitleService{
 	@Override
 	public Result add(JobTitle jobTitle) {
 		this.jobTitleDao.save(jobTitle);
-		return new SuccessResult("JobTitle eklendi");
+		return new SuccessResult( jobTitle.getName()+" eklendi");
 	}
+	
+	
+	
 
 }

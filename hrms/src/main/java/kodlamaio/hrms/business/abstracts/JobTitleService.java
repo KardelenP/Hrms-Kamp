@@ -10,4 +10,5 @@ public interface JobTitleService {
 	DataResult<List<JobTitle>> getAll();
 	Result add(JobTitle jobTitle);//Dao sayesinde kolayca eklememiz için  fırsat veriyo,bir tane job isteyip onu ekliyo olucaz
 
+    
 }
