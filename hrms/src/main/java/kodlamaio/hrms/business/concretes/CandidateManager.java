@@ -32,7 +32,7 @@ public class CandidateManager implements CandidateService{
 	@Override
 	public Result add(Candidate candidate) {
 		this.candidateDao.save(candidate);
-		return new SuccessResult("Candidate eklendi");
+		return new SuccessResult(candidate.getId() + " eklendi");
 	}
 
 }

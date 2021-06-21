@@ -31,7 +31,7 @@ public class JobTitleManager implements JobTitleService{
 	@Override
 	public Result add(JobTitle jobTitle) {
 		this.jobTitleDao.save(jobTitle);
-		return new SuccessResult( jobTitle.getName()+" eklendi");
+		return new SuccessResult( jobTitle.getName() + " eklendi");
 	}
 	
 	

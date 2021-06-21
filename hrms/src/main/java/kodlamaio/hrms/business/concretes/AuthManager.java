@@ -1,9 +1,15 @@
-package kodlamaio.hrms.business.concretes;
+ package kodlamaio.hrms.business.concretes;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Pattern;
 
-
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import kodlamaio.hrms.business.abstracts.AuthService;
 
@@ -11,6 +17,7 @@ import kodlamaio.hrms.core.utilities.results.ErrorResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.Candidate;
 import kodlamaio.hrms.entities.concretes.Employer;
+
 
 @Service
 public class AuthManager implements AuthService{
@@ -32,7 +39,7 @@ public class AuthManager implements AuthService{
 			return new ErrorResult("Password does not match. Please re-enter your password.");
 		}
 		
-		return new ErrorResult();
+		return new ErrorResult(); 
 	}
 
 	@Override
@@ -47,6 +54,7 @@ public class AuthManager implements AuthService{
 
 		return new ErrorResult();
 	}
+	
 
 
 }

@@ -13,7 +13,7 @@ import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.EmployerDao;
 import kodlamaio.hrms.entities.concretes.Employer;
 @Service
-public class EmployerManager implements EmployerService{
+public class EmployerManager implements EmployerService	{
 
 	private EmployerDao employerDao;
 	
@@ -32,7 +32,7 @@ public class EmployerManager implements EmployerService{
 	@Override
 	public Result add(Employer employer) {
 		this.employerDao.save(employer);
-		return new SuccessResult("Employer eklendi");
+		return new SuccessResult(employer.getCompanyName() + " eklendi");
 	}
 
 	@Override

@@ -34,6 +34,6 @@ public class SystemStaffManager implements SystemStaffService{
 	@Override
 	public Result add(SystemStaff systemStaff) {
 		this.systemStaffDao.save(systemStaff);
-		return new SuccessResult("SystemStaff eklendi");
+		return new SuccessResult(systemStaff.getId() + " eklendi");
 	}
 }
